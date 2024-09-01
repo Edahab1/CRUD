@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>JavaScript</title>
+</head>
+<body>
+
+    <div class="container my-5 py-5">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="productName" placeholder="Name"
+            oninput="validate(this)">
+            <div class="alert alert-danger d-none"> Name should start with a capital letter then 2 to 8 characters after</div>
+            <label for="floatingInput">Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="productPrice" placeholder="Price"
+            oninput="validate(this)">
+            <div class="alert alert-danger d-none">Price range from 10 to 999</div>
+            <label for="floatingInput">Price</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="productCategory" placeholder="Category"
+            oninput="validate(this)">
+            <div class="alert alert-danger d-none">input is either tv / laptop / screen / mobile</div>
+            <label for="floatingInput">Category</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="productDescription" placeholder="Description"
+            oninput="validate(this)">
+            <div class="alert alert-danger d-none">decribe the product with 10 characters max</div>
+            <label for="floatingInput">Description</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="file" class="form-control" id="productImage">
+            <label for="floatingInput">Upload file</label>
+        </div>
+
+        <button onclick="addProduct()" id="addBtn" class="btn btn-info">Add Product</button>
+        <button onclick="updateProduct()" id="updateBtn" class="btn btn-warning d-none">Edit Product</button>
+        
+    
+        <input oninput="search()" type="text" id="search" class="form-control mt-3" placeholder="search">
+        
+    </div>
+
+    <div class="container my-5">
+        <div class="row" id="productRow">
+            <!-- <div class="col-3">
+                <div class="productOutline">
+                    <img src="./images/4.jpg" class="w-100" alt="">
+                    <h3 class="h6 pt-3">code:</h3>
+                    <p>price:</p>
+                    <p>category:</p>
+                    <p>description:</p>
+                </div>
+            </div> -->
+            
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+    <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.js"></script>
+</body>
+</html>
